@@ -1,0 +1,17 @@
+def gradingStudents(grades):
+    finalGrade = []
+    for grade in grades:
+        if grade <= 100 and grade >= 37:
+            if grade % 5 == 0:
+                finalGrade.append(grade) 
+            elif grade % 5 != 0:
+                num = grade // 5 
+                num = (num+1) * 5   
+                if num - grade < 3:
+                    finalGrade.append(num) 
+                else: 
+                    finalGrade.append(grade)    
+        else:
+             finalGrade.append(grade)   
+                  
+    return finalGrade  

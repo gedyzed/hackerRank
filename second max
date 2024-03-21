@@ -1,0 +1,13 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    arr = list(arr)
+    arr.sort()
+    max = arr[-1]
+    second_max = 0 
+    
+for i in range (n-1,-1,-1):
+    if arr[i] != max:
+        second_max = arr[i]
+        break
+print(second_max)
